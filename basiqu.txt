@@ -1,0 +1,2 @@
+npm install express nodemon --save-dev mysql2 body-parser  cors multer
+
