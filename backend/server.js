@@ -14,6 +14,7 @@ app.get("/api/cars", (req, res) => {
   db.query("SELECT * FROM Cars", (err, carRows) => {
     if (err) {
       res.status(500).send("Error fetching cars");
+      console.error(err);
     } else {
       // Get all car IDs
       const carIds = carRows.map(car => car.car_id);

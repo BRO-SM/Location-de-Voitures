@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export default function NavBar() {
     return (
+        <header>
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
                 <NavLink className="navbar-brand text-danger" to="/">
@@ -38,6 +39,7 @@ export default function NavBar() {
                 </div>
             </div>
         </nav>
+        </header>
     );
 }
  

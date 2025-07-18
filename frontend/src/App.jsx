@@ -1,36 +1,32 @@
-import { useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 
-import Home from './components/pages/Home'
-import NavBar from './components/pages/NavBar'
-import Addcar from './components/cars/Addcar'
-import CarDetails from './components/cars/CarDetails'
-import UpdateCar from './components/cars/UpdateCar'
-import Cars from './components/cars/cars'
-
+import Home from "./pages/Home";
+import NavBar from "./pages/NavBar";
+import Addcar from "./pages/cars/Addcar";
+import CarDetails from "./pages/cars/CarDetails";
+import UpdateCar from "./pages/cars/UpdateCar";
+import Cars from "./pages/cars/Cars";
+import Footer from "./pages/Footer";
+import Contact from "./pages/Contact";
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <div>
-      <NavBar/>
+      <NavBar />
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/cars" element={<Cars/>} />
-        <Route path="/add-car" element={<Addcar/>} />
-        <Route path='/carDetails/:id'element={<CarDetails/>}/>
-        <Route path='/updateCar/:id'element={<UpdateCar/>}/>
-        
-        
-
+        <Route path="/" element={<Home />} />
+        <Route path="/cars" element={<Cars />} />
+        <Route path="/add-car" element={<Addcar />} />
+        <Route path="/carDetails/:id" element={<CarDetails />} />
+        <Route path="/updateCar/:id" element={<UpdateCar />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
-
-      
-
-
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
